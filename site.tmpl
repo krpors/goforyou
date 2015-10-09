@@ -1,0 +1,126 @@
+{{ define "header" }}<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Go For You, personal training.">
+
+	<title>{{ .Site.Other.Title }} &ndash; {{ .Site.Other.Tagline }}</title>
+
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+
+	<!--[if lte IE 8]>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+	<![endif]-->
+	<!--[if gt IE 8]><!-->
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+	<!--<![endif]-->
+  
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/blog-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="static/css/layouts/blog.css">
+    <!--<![endif]-->
+
+	<link rel="stylesheet" href="static/css/mdposts.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+        <div class="header">
+			<img class="pure-img-responsive" src="/static/img/logo-small.png"/>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="pure-button" href="/">Homepagina</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="/trainster.html">Trainster</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="/pt.html">Personal Training</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="/specialisme.html">Specialisme</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="/locaties.html">Locaties &amp; Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="/partners.html">Partners</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            <!-- A wrapper for all the blog posts -->
+            <div class="posts">
+				<h1 class="content-subhead">{{ .Title }}</h1>
+{{ end }}
+
+{{ define "footer" }}
+				<div class="footer">
+					<div class="pure-menu pure-menu-horizontal">
+						<ul>
+							<li class="pure-menu-item">
+								<a href="https://www.linkedin.com/pub/margot-pors-eerhart/10/71a/624" class="pure-menu-link">
+									<img class="social-icon" src="static/img/linkedin.png"/></a>
+							</li>
+							<li class="pure-menu-item">
+								<a href="http://twitter.com/goforyoupt/" class="pure-menu-link">
+									<img class="social-icon" src="static/img/twitter.png"/></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+{{ end }}
+
+{{define "date"}}
+<time datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
+  {{ .Format "2006, January 02" }}
+</time>
+{{end}}
+
+{{ define "page" }}
+{{ template "header" . }}
+	<div class="single-page-content">
+		{{ .Content }}
+	</div>
+{{ template "footer" . }}
+{{ end }}
+
+{{ define "post" }}
+<article>
+  <header>
+    <h1>{{ .Title }}</h1>
+    <div class="info">
+      {{ template "date" .Date }} &mdash;
+      {{ range $i, $t := .Tags }}{{if $i}},{{end}}
+      <a href="/tags/{{ $t }}/">{{ $t }}</a>{{ end }}
+    </div>
+  </header>
+  <section>
+  {{ .Content }}
+  </section>
+</article>
+{{ end }}
+
+{{define "tag"}}
+# Pages tagged with {{ .Title }}
+{{ range .Site.Pages.WithTag .Title }}
+- [{{ .Title }}](../../{{ .Url }})
+{{ end }}
+{{ end }}

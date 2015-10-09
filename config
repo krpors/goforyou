@@ -1,0 +1,23 @@
+TEMPLATES = site.tmpl
+SOURCE = src
+OUTPUT = site
+TITLE = Go For You
+TAGLINE = Personal Training
+URL = http://goforyou-pt.nl/
+AUTHOR = Kevin Pors
+
+blog/*.md:
+	config
+	ext .html
+	directorify
+	tags tags/*.tag
+	markdown
+	template post
+
+*.html:
+	config
+	markdown
+	template page
+
+*~:
+	ignore
