@@ -32,6 +32,4 @@ programma staat, of net even dat zetje om wat strakker de zomer in te gaan.
 ### Skifit
 
 Een speciaal programma om zonder problemen de bergen af te kunnen stormen.
-Prijzen zijn opvraagbaar via margot@goforyou-pt.nl.
-
-PT
+Prijzen zijn opvraagbaar via [margot@goforyou-pt.nl](mailto:margot@goforyou-pt.nl).

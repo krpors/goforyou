@@ -7,7 +7,7 @@ title: Trainster
 
 Ik ben Margot Eerhart. Sinds vier jaar ben ik een gediplomeerd personal trainster.
 Mijn passie voor fitness begon op mijn zestiende jaar. Na jarenlang alleen
-maar te hebben gevoetbald, merkte ik dat ik aan een plafond zat. Ik kwam niet 
+maar te hebben gevoetbald, merkte ik dat ik aan een plafond zat. Ik kwam niet
 verder en dat werkt voor een sportminded persoon vrij frustrerend. Ik moest
 mijn lichaam toch wel sterker kunnen maken? Omdat voetbal niet genoeg was
 schreef ik mij in bij een ouderwetse sportschool.

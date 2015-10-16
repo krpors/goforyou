@@ -15,8 +15,9 @@ blog/*.md:
 	template post
 	template page
 
-*.html:
+*.md:
 	config
+	ext .html
 	markdown
 	template page
 

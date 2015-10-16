@@ -160,6 +160,12 @@ h3 {
     background: none;
 }
 
+.footer ul {
+    padding-top: 10px;
+    padding-left: 0px;
+    border-top: 1px solid #eee;
+}
+
 @media (min-width: 48em) {
     .content {
         padding: 2em 3em 0;
@@ -181,4 +187,8 @@ h3 {
 
 img.social-icon {
 	max-width: 25px;
+}
+
+td {
+    padding: 5px 10px 5px 0px;
 }

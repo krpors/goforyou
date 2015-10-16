@@ -10,5 +10,5 @@ Op mijn website lees je van alles over personal training, en over wie ik ben.
 
 Meer informatie? Of een proefsessie?
 
-Neem contact o met mij via <a href="mailto:margot@goforyou-pt.nl">margot@goforyou-pt.nl</a> 
-of via het telefoonnummer <a href="tel:+31619985235">+316 1998 5235</a>.
+Neem contact op met mij via [margot@goforyou-pt.nl](mailto:margot@goforyou-pt.nl)
+of via het telefoonnummer [+31 6 1998 5235](tel:+31619985235)!
