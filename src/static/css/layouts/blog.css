@@ -72,6 +72,7 @@ h3 {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     font-size: 85%;
+    font-family: "Lora", "Georgia", serif;
 }
 .nav-item a:hover,
 .nav-item a:focus {

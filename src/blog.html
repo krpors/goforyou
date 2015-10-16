@@ -1,0 +1,10 @@
+title: Blog
+date: 2012-05-03
+----
+<h1>Fitness &amp; Health</h1>
+Lees hier artikelen geschreven door mij.
+<ul>
+{{ range .Site.Pages.Children "blog/" }}
+    <li>{{ template "date" .Date }} &ndash; <a href="{{ .Rel .Url }}">{{ .Title }}</a></li>
+{{ end }}
+</ul>

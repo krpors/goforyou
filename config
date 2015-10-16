@@ -3,8 +3,14 @@ SOURCE = src
 OUTPUT = site
 TITLE = Go For You
 TAGLINE = Personal Training
-URL = http://goforyou-pt.nl/
+URL = http://goforyou-pt.nl
 AUTHOR = Kevin Pors
+
+test.html:
+	config
+	ext .html
+	template post
+	template page
 
 blog/*.md:
 	config
@@ -15,9 +21,26 @@ blog/*.md:
 	template post
 	template page
 
-*.md:
+# Note: the dependency prevents some weird bug of process blog/ pages using
+# this rule, instead of the top one.
+*.md: blog/*.md
 	config
 	ext .html
+	markdown
+	template page
+
+atom.xml: blog/*.md
+	inner-template
+
+blog.html:
+	config
+	inner-template
+	template page
+
+*.tag: blog/*.md
+	ext .html
+	directorify
+	template tag
 	markdown
 	template page
 

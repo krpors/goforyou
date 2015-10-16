@@ -9,7 +9,9 @@ Ik bied trainingen buiten, bij u thuis of op drie mooie locaties in Den Haag:
 * Laan Copes van Cattenburch (Den Haag);
 * Breitnerlaan (Den Haag).
 
-# Contactgegevens
+### Contactgegevens
+
+Voor contact zijn de volgende gegevens beschikbaar:
 
 |                 |                                                                      |
 | --------------- | ---------------------------------------------------------------------|

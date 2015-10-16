@@ -16,3 +16,19 @@ div.single-page-content img {
 	max-width: 100%;
 	height: auto;
 }
+
+/* Link to a tag */
+a.tag {
+    background-color: #8fd4e2;
+    font-size: 80%;
+    padding: 2px 5px 2px 5px;
+    border-radius: 6px;
+    color: #042665;
+    font-family: sans-serif;
+}
+
+div.publish-date-desc {
+    color: #aaa;
+    font-size: 80%;
+    margin-bottom: 2em;
+}

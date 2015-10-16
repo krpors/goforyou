@@ -25,7 +25,7 @@
         <link rel="stylesheet" href="/static/css/layouts/blog.css">
     <!--<![endif]-->
 
-    <link rel="stylesheet" href="static/css/mdposts.css"/>
+    <link rel="stylesheet" href="/static/css/mdposts.css"/>
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic" rel="stylesheet" type="text/css">
 
 </head>
@@ -39,6 +39,9 @@
                 <ul class="nav-list">
                     <li class="nav-item">
                         <a class="pure-button" href="/">Homepagina</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="/blog.html">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="pure-button" href="/trainster.html">Trainster</a>
@@ -73,11 +76,11 @@
                         <ul>
                             <li class="pure-menu-item">
                                 <a href="https://www.linkedin.com/pub/margot-pors-eerhart/10/71a/624" class="pure-menu-link">
-                                    <img class="social-icon" src="static/img/linkedin.png"/></a>
+                                    <img class="social-icon" src="/static/img/linkedin.png"/></a>
                             </li>
                             <li class="pure-menu-item">
                                 <a href="http://twitter.com/goforyoupt/" class="pure-menu-link">
-                                    <img class="social-icon" src="static/img/twitter.png"/></a>
+                                    <img class="social-icon" src="/static/img/twitter.png"/></a>
                             </li>
                         </ul>
                     </div>
@@ -91,7 +94,7 @@
 
 {{define "date"}}
 <time datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
-  {{ .Format "2006, January 02" }}
+  {{ .Format "02-01-2006" }}
 </time>
 {{end}}
 
@@ -105,22 +108,22 @@
 
 {{ define "post" }}
 <article>
-  <header>
-    <h1>{{ .Title }}</h1>
-    <div class="info">
-      {{ template "date" .Date }} &mdash;
-      {{ range $i, $t := .Tags }}{{if $i}},{{end}}
-      <a href="/tags/{{ $t }}/">{{ $t }}</a>{{ end }}
-    </div>
-  </header>
-  <section>
-  {{ .Content }}
-  </section>
+    <header>
+        <h1>{{ .Other.Subtitle }}</h1>
+        <div class="publish-date-desc">Gepubliceerd op {{ template "date" .Date }} &mdash;
+        {{ range $i, $t := .Tags }}
+            <a class="tag" href="/tags/{{ $t }}/">{{ $t }}</a>
+        {{ end }}
+        </div>
+    </header>
+    <section>
+        {{ .Content }}
+    </section>
 </article>
 {{ end }}
 
 {{define "tag"}}
-# Pages tagged with {{ .Title }}
+# Pagina's met de tag  '{{ .Title }}':
 {{ range .Site.Pages.WithTag .Title }}
 - [{{ .Title }}](../../{{ .Url }})
 {{ end }}
