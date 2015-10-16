@@ -13,6 +13,7 @@ blog/*.md:
 	tags tags/*.tag
 	markdown
 	template post
+	template page
 
 *.html:
 	config
