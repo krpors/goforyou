@@ -38,7 +38,7 @@ h3 {
  */
 .sidebar {
     background: rgb(61, 79, 93);
-	background-image: url("/static/img/pt.jpg");
+	background-image: url("/static/img/pt-mobile.jpg");
     color: #fff;
 }
 
@@ -184,6 +184,10 @@ h3 {
         top: 0;
         bottom: 0;
     }
+}
+
+@media (min-width: 11px) {
+    
 }
 
 img.social-icon {
